@@ -80,7 +80,7 @@ export function ContactSection() {
                   Thank you for contacting Meta-Phoenix. Our security team will respond within 24 hours.
                 </p>
                 <p className="text-sm text-green-400">
-                  For urgent security matters, please call our emergency hotline: +268 XX XXX XXXX
+                  For urgent security matters, please call our emergency hotline: +268 79368989 | +268 76648871
                 </p>
               </CardContent>
             </Card>
@@ -202,7 +202,7 @@ export function ContactSection() {
                   <Phone className="h-6 w-6 text-purple-400 mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-white">24/7 Emergency Hotline</h4>
-                    <p className="text-gray-400">+268 XX XXX XXXX</p>
+                    <p className="text-gray-400">+268 79368989 | +268 76648871</p>
                     <Button
                       onClick={handleCallEmergency}
                       variant="ghost"
@@ -217,7 +217,7 @@ export function ContactSection() {
                   <Mail className="h-6 w-6 text-purple-400 mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-white">Security Team</h4>
-                    <p className="text-gray-400">security@metaphoenix.co.sz</p>
+                    <p className="text-gray-400">meta.phoenix.eswatini.8@gmail.com</p>
                     <Button
                       onClick={handleEmailContact}
                       variant="ghost"

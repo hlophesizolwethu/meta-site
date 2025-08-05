@@ -34,8 +34,8 @@ export function Contact({ companyInfo }: ContactProps) {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const address = companyInfo?.address || "Mbabane, Eswatini"
-  const phone = companyInfo?.phone || "+268 XX XXX XXXX"
-  const email = companyInfo?.email || "security@metaphoenix.co.sz"
+  const phone = companyInfo?.phone || "+268 79368989 | +268 76648871"
+  const email = companyInfo?.email || "meta.phoenix.eswatini.8@gmail.com"
   const businessHours = companyInfo?.business_hours || "24/7 Security Operations Center"
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
