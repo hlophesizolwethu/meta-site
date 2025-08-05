@@ -1,8 +1,11 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import { Suspense } from "react"
 import { Header } from "@/components/header"
 import { FloatingChatbot } from "@/components/floating-chatbot"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -30,9 +33,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-black min-h-screen`}>
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <FloatingChatbot />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <FloatingChatbot />
+          <Analytics />
+          <SpeedInsights />
+        </Suspense>
       </body>
     </html>
   )
