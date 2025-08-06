@@ -3,7 +3,7 @@ import { ResearchPaperDetail } from "@/components/research-paper-detail"
 import { RelatedResearch } from "@/components/related-research"
 import { ResearchCTA } from "@/components/research-cta"
 
-// Remove custom PageProps and ResearchDetailPageProps types
+// No custom PageProps or ResearchDetailPageProps types
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const supabase = createClient()
@@ -61,7 +61,7 @@ export default async function ResearchDetailPage({ params }: { params: { id: str
   const supabase = createClient()
 
   // Try to fetch the research project
-  const { data: project, error } = await supabase
+  const { data: project } = await supabase
     .from("research_projects")
     .select(`
       *,
