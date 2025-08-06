@@ -2,20 +2,10 @@ import { createClient } from "@/lib/supabase"
 import { ResearchPaperDetail } from "@/components/research-paper-detail"
 import { RelatedResearch } from "@/components/related-research"
 import { ResearchCTA } from "@/components/research-cta"
-// Define PageProps type locally since "next" does not export it
-type PageProps = {
-  params: {
-    id: string
-  }
-}
 
-interface ResearchDetailPageProps {
-  params: {
-    id: string
-  }
-}
+// Remove custom PageProps and ResearchDetailPageProps types
 
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata({ params }: { params: { id: string } }) {
   const supabase = createClient()
 
   const { data: project } = await supabase
@@ -67,7 +57,7 @@ const getDefaultProject = (id: string) => ({
   ],
 })
 
-export default async function ResearchDetailPage({ params }: PageProps) {
+export default async function ResearchDetailPage({ params }: { params: { id: string } }) {
   const supabase = createClient()
 
   // Try to fetch the research project
